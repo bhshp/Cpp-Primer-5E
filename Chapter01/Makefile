@@ -1,7 +1,7 @@
 src = $(wildcard *.cc)
 target = $(patsubst 1.%.cc,%.out,$(src))
 CC = g++
-CCFLAGS = -std=c++11 -Wall -Wextra -Werror
+CCFLAGS = -std=c++11 -Wall -Wextra -Werror -I./include
 
 %.out: 1.%.cc
 	$(CC) -o $@ $^ $(CCFLAGS)
